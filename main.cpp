@@ -9,6 +9,8 @@
 #include <iomanip> // std::setfill() and std::setw()
 #include <ctime> // std::time() and std::localtime
 
+void Round ();
+
 int main(int argc, char** argv) {
 	// this program continues execution till closed manually	
 
@@ -30,20 +32,20 @@ int main(int argc, char** argv) {
 	// getting whether it is am or pm
 	std::string period = hour > 12 ? "PM" : "AM";
 	
-	// rounding integers to 2
-	std::cout << std::setfill('0') << std::setw(2);
+	// rounding
+	Round();
 	std::cout << hourToDisplay; // hours in 12 hour format
 	
 	std::cout << ":";
 	
 	// rounding
-	std::cout << std::setfill('0') << std::setw(2);
+	Round();
 	std::cout << min; // mins
 	
 	std::cout << ":";
 	
 	// rounding
-	std::cout << std::setfill('0') << std::setw(2);
+	Round();
 	std::cout << sec; // secs
 	
 	std::cout << " " + period; // displaying am or pm
@@ -51,5 +53,11 @@ int main(int argc, char** argv) {
 	system("cls"); // clearing the console
 	
 	goto clock; // going back to start
+}
+
+void Round ()
+{
+	// rounding integers to 2
+	std::cout << std::setfill('0') << std::setw(2);
 }
 
