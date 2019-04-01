@@ -8,15 +8,11 @@ This is not anything of advanced level. Just the simple clock that syncs with yo
 ### Issues you may run into
 There are 2 ways of solving it
 1. Enabling C++ 11
-2. Changing following code
+2. Changing the code to old snippet
 ```
-auto hour = now->tm_hour;
-auto min = now->tm_min;
-auto sec = now->tm_sec;
+auto var_name = 50;
 ```
-to
+to valid data type
 ```
-int hour = now->tm_hour;
-int min = now->tm_min;
-int sec = now->tm_sec;
+int var_name = 50;
 ```
